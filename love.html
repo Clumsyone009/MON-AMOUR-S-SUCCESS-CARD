@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+/>
+
+<title>I Love You Aisha Amour ❤️</title>
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+
+    background: #070910;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color: white;
+}
+
+
+/* =====================================================
+   SCENE
+===================================================== */
+
+#scene {
+
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            ellipse at 50% 45%,
+            rgba(75, 68, 82, 0.16),
+            transparent 45%
+        ),
+
+        linear-gradient(
+            120deg,
+            #070910,
+            #0b0e18 45%,
+            #090b13
+        );
+
+    transition:
+        background 1.2s ease;
+}
+
+
+/* LIGHT ON */
+
+#scene.is-on {
+
+    background:
+
+        radial-gradient(
+            ellipse at 25% 50%,
+            rgba(255, 178, 102, 0.28),
+            transparent 38%
+        ),
+
+        radial-gradient(
+            ellipse at 55% 48%,
+            rgba(180, 104, 58, 0.20),
+            transparent 60%
+        ),
+
+        linear-gradient(
+            120deg,
+            #30251f,
+            #17151a 60%,
+            #0c0d13
+        );
+}
+
+
+/* =====================================================
+   LAMP
+===================================================== */
+
+.lamp {
+
+    position: absolute;
+
+    left: 7%;
+
+    top: 20%;
+
+    width: 115px;
+
+    height: 300px;
+}
+
+
+/* wire from ceiling */
+
+.lamp-wire {
+
+    position: absolute;
+
+    left: 55px;
+
+    top: -120px;
+
+    width: 2px;
+
+    height: 150px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #5e626b,
+            #8c8d91
+        );
+}
+
+
+/* horizontal lamp support */
+
+.lamp-bar {
+
+    position: absolute;
+
+    top: 5px;
+
+    left: 4px;
+
+    width: 104px;
+
+    height: 10px;
+
+    border-radius: 5px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #656974,
+            #252832
+        );
+
+    box-shadow:
+        0 2px 5px rgba(0,0,0,.5);
+}
+
+
+/* bulb wire */
+
+.bulb-wire {
+
+    position: absolute;
+
+    top: 15px;
+
+    left: 54px;
+
+    width: 2px;
+
+    height: 42px;
+
+    background: #74767d;
+}
+
+
+/* =====================================================
+   BULB
+===================================================== */
+
+.bulb {
+
+    position: absolute;
+
+    top: 52px;
+
+    left: 28px;
+
+    width: 58px;
+
+    height: 72px;
+
+    border-radius:
+        50%
+        50%
+        45%
+        45%;
+
+    background:
+
+        radial-gradient(
+            circle at 38% 30%,
+            rgba(255,255,255,.8),
+            rgba(255,255,255,.15) 9%,
+            #555861 35%,
+            #30333c 80%
+        );
+
+    border: 1px solid rgba(255,255,255,.12);
+
+    transition:
+        background 1s ease,
+        box-shadow 1s ease,
+        transform .4s ease;
+}
+
+
+/* bulb ON */
+
+.is-on .bulb {
+
+    background:
+
+        radial-gradient(
+            circle at 38% 30%,
+            white 0%,
+            #fff2ca 15%,
+            #ffd38c 42%,
+            #ffb763 70%,
+            #e89043 100%
+        );
+
+    box-shadow:
+
+        0 0 8px #ffd28a,
+        0 0 22px #ffbd68,
+        0 0 50px rgba(255,173,80,.8),
+        0 0 100px rgba(255,151,62,.55),
+        0 0 160px rgba(255,134,45,.25);
+}
+
+
+/* little highlight */
+
+.bulb::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 13px;
+    left: 15px;
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.75);
+
+    filter: blur(1px);
+}
+
+
+/* bulb base */
+
+.bulb-base {
+
+    position: absolute;
+
+    left: 39px;
+
+    top: 121px;
+
+    width: 37px;
+
+    height: 17px;
+
+    border-radius: 0 0 5px 5px;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            #252830 0px,
+            #252830 3px,
+            #555861 3px,
+            #555861 5px
+        );
+}
+
+
+/* =====================================================
+   PULL CORD
+===================================================== */
+
+.pull-cord {
+
+    position: absolute;
+
+    top: 137px;
+
+    left: 57px;
+
+    width: 2px;
+
+    height: 105px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #b0b0b0,
+            #686a70
+        );
+
+    transform-origin: top center;
+
+    transition:
+        transform .25s ease;
+}
+
+
+/* cord movement */
+
+.pull-cord.pulling {
+
+    transform:
+        rotate(8deg)
+        translateY(13px);
+}
+
+
+/* =====================================================
+   CORD HANDLE
+===================================================== */
+
+.cord-handle {
+
+    position: absolute;
+
+    bottom: -14px;
+
+    left: -8px;
+
+    width: 18px;
+
+    height: 18px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #f4f4f4,
+            #9b9da1 55%,
+            #555860
+        );
+
+    cursor: pointer;
+
+    box-shadow:
+        0 2px 5px rgba(0,0,0,.5);
+
+    transition:
+        box-shadow .5s ease,
+        background .5s ease;
+}
+
+
+.is-on .cord-handle {
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #fff3d3,
+            #ffc675 55%,
+            #e89440
+        );
+
+    box-shadow:
+        0 0 10px #ffb45d,
+        0 0 22px rgba(255,167,75,.7);
+}
+
+
+/* =====================================================
+   LAMP INSTRUCTION
+===================================================== */
+
+.lamp-hint {
+
+    position: absolute;
+
+    top: 170px;
+
+    left: -2px;
+
+    width: 120px;
+
+    color:
+        rgba(255,255,255,.35);
+
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    line-height: 17px;
+
+    transition:
+        opacity .6s ease;
+}
+
+
+.is-on .lamp-hint {
+    opacity: 0;
+}
+
+
+/* =====================================================
+   CENTER MESSAGE
+===================================================== */
+
+.love-container {
+
+    position: absolute;
+
+    left: 53%;
+
+    top: 47%;
+
+    transform:
+        translate(-50%, -50%);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    width: 70%;
+
+    max-width: 700px;
+
+    opacity: 0;
+
+    transition:
+        opacity .8s ease;
+}
+
+
+.is-on .love-container {
+    opacity: 1;
+}
+
+
+/* =====================================================
+   SIDE LINES
+===================================================== */
+
+.side-line {
+
+    width: 3px;
+
+    height: 130px;
+
+    flex-shrink: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            white 15%,
+            white 85%,
+            transparent
+        );
+
+    transform:
+        scaleY(0);
+
+    transition:
+        transform 1s cubic-bezier(.2,.8,.2,1);
+}
+
+
+.is-on .side-line {
+
+    transform:
+        scaleY(1);
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+.message {
+
+    text-align: center;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-weight: 700;
+
+    line-height: 1.15;
+
+    letter-spacing: 2px;
+
+    color: #f6a04e;
+
+    text-shadow:
+        0 0 8px rgba(255,145,60,.2),
+        0 0 25px rgba(255,130,50,.12);
+}
+
+
+/* =====================================================
+   LETTER
+===================================================== */
+
+.letter {
+
+    display: inline-block;
+
+    opacity: 0;
+
+    transform:
+        translateY(30px)
+        scale(.6);
+
+    transition:
+        opacity .45s ease,
+        transform .55s cubic-bezier(.2,.8,.2,1);
+}
+
+
+/* visible letter */
+
+.letter.show {
+
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* =====================================================
+   NAME
+===================================================== */
+
+.name {
+
+    display: block;
+
+    margin-top: 12px;
+
+    font-size: .75em;
+
+    color: #ffad62;
+
+    letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   HEART
+===================================================== */
+
+.heart {
+
+    display: inline-block;
+
+    margin-left: 10px;
+
+    color: #f05a96;
+
+    font-size: 1.05em;
+
+    opacity: 0;
+
+    transform:
+        scale(0);
+
+    text-shadow:
+        0 0 8px #ff5a99,
+        0 0 25px rgba(255,60,130,.8);
+
+    transition:
+        opacity .5s ease,
+        transform .5s cubic-bezier(.2,1.5,.4,1);
+}
+
+
+.heart.show {
+
+    opacity: 1;
+
+    transform:
+        scale(1);
+
+    animation:
+        heartbeat 1.2s infinite;
+}
+
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.17);
+    }
+}
+
+
+/* =====================================================
+   FLOATING PARTICLES
+===================================================== */
+
+.particle {
+
+    position: absolute;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #ffd7a5;
+
+    box-shadow:
+        0 0 8px #ffbc70;
+
+    pointer-events: none;
+
+    animation:
+        particleFloat 2.5s ease-out forwards;
+}
+
+
+@keyframes particleFloat {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translate(0,0)
+            scale(0);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(
+                var(--x),
+                var(--y)
+            )
+            scale(.2);
+    }
+}
+
+
+/* =====================================================
+   BOTTOM TEXT
+===================================================== */
+
+.bottom-text {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 7%;
+
+    transform:
+        translateX(-50%);
+
+    color:
+        rgba(255,255,255,.35);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    transition:
+        opacity .5s ease;
+}
+
+
+.is-on .bottom-text {
+    opacity: .45;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .lamp {
+
+        left: 3%;
+
+        top: 19%;
+
+        transform:
+            scale(.8);
+
+        transform-origin:
+            top left;
+    }
+
+
+    .love-container {
+
+        left: 58%;
+
+        width: 70%;
+
+        gap: 13px;
+    }
+
+
+    .side-line {
+
+        height: 105px;
+
+        width: 2px;
+    }
+
+
+    .message {
+
+        font-size: 34px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .name {
+
+        font-size: .7em;
+
+        margin-top: 10px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .bottom-text {
+
+        bottom: 5%;
+
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .message {
+        font-size: 28px;
+    }
+
+    .love-container {
+        left: 58%;
+        gap: 8px;
+    }
+
+    .side-line {
+        height: 90px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<div id="scene">
+
+
+    <!-- ================================================
+         LAMP
+    ================================================= -->
+
+    <div class="lamp">
+
+        <div class="lamp-wire"></div>
+
+        <div class="lamp-bar"></div>
+
+        <div class="bulb-wire"></div>
+
+        <div class="bulb"></div>
+
+        <div class="bulb-base"></div>
+
+
+        <!-- PULL CORD -->
+
+        <div
+            class="pull-cord"
+            id="pullCord"
+        >
+
+            <div
+                class="cord-handle"
+                id="cordHandle"
+            ></div>
+
+        </div>
+
+
+        <div class="lamp-hint">
+            Pull the cord to<br>
+            switch on
+        </div>
+
+    </div>
+
+
+
+    <!-- ================================================
+         MESSAGE
+    ================================================= -->
+
+    <div class="love-container">
+
+        <div class="side-line"></div>
+
+
+        <div class="message">
+
+            <div id="mainMessage"></div>
+
+            <div class="name">
+                AISHA AMOUR
+                <span
+                    class="heart"
+                    id="heart"
+                >♥</span>
+            </div>
+
+        </div>
+
+
+        <div class="side-line"></div>
+
+    </div>
+
+
+
+    <!-- PARTICLES -->
+
+    <div id="particles"></div>
+
+
+
+    <!-- BOTTOM -->
+
+    <div class="bottom-text">
+        made with love
+    </div>
+
+
+</div>
+
+
+
+<script>
+
+/* =====================================================
+   ELEMENTS
+===================================================== */
+
+const scene =
+    document.getElementById("scene");
+
+const pullCord =
+    document.getElementById("pullCord");
+
+const cordHandle =
+    document.getElementById("cordHandle");
+
+const mainMessage =
+    document.getElementById("mainMessage");
+
+const heart =
+    document.getElementById("heart");
+
+const particles =
+    document.getElementById("particles");
+
+
+/* =====================================================
+   MESSAGE YOU WANT
+===================================================== */
+
+const message =
+    "I LOVE YOU";
+
+
+/* =====================================================
+   CREATE LETTERS
+===================================================== */
+
+message.split("").forEach(
+    (character, index) => {
+
+        const span =
+            document.createElement("span");
+
+        span.classList.add("letter");
+
+        if (character === " ") {
+
+            span.innerHTML =
+                "&nbsp;";
+
+        } else {
+
+            span.textContent =
+                character;
+
+        }
+
+        mainMessage.appendChild(span);
+
+    }
+);
+
+
+/* =====================================================
+   STATE
+===================================================== */
+
+let isOn = false;
+
+let animating = false;
+
+
+/* =====================================================
+   PULL THE CORD
+===================================================== */
+
+function pull() {
+
+    if (animating)
+        return;
+
+    animating = true;
+
+
+    /* cord movement */
+
+    pullCord.classList.add("pulling");
+
+
+    setTimeout(() => {
+
+        pullCord.classList.remove(
+            "pulling"
+        );
+
+    }, 350);
+
+
+    /* change state */
+
+    isOn = !isOn;
+
+
+    setTimeout(() => {
+
+        if (isOn) {
+
+            turnOn();
+
+        } else {
+
+            turnOff();
+
+        }
+
+    }, 250);
+
+
+    setTimeout(() => {
+
+        animating = false;
+
+    }, 2200);
+}
+
+
+/* =====================================================
+   TURN ON
+===================================================== */
+
+function turnOn() {
+
+    scene.classList.add(
+        "is-on"
+    );
+
+
+    const letters =
+        document.querySelectorAll(
+            ".letter"
+        );
+
+
+    /*
+       Reveal each character
+       one after another
+    */
+
+    letters.forEach(
+        (letter, index) => {
+
+            setTimeout(() => {
+
+                letter.classList.add(
+                    "show"
+                );
+
+            }, 500 + index * 100);
+
+        }
+    );
+
+
+    /*
+       Show heart
+    */
+
+    setTimeout(() => {
+
+        heart.classList.add(
+            "show"
+        );
+
+        createParticles();
+
+    }, 1700);
+
+}
+
+
+/* =====================================================
+   TURN OFF
+===================================================== */
+
+function turnOff() {
+
+    scene.classList.remove(
+        "is-on"
+    );
+
+
+    document
+        .querySelectorAll(".letter")
+        .forEach(letter => {
+
+            letter.classList.remove(
+                "show"
+            );
+
+        });
+
+
+    heart.classList.remove(
+        "show"
+    );
+
+}
+
+
+/* =====================================================
+   PARTICLES
+===================================================== */
+
+function createParticles() {
+
+    for (
+        let i = 0;
+        i < 25;
+        i++
+    ) {
+
+        const particle =
+            document.createElement(
+                "div"
+            );
+
+
+        particle.classList.add(
+            "particle"
+        );
+
+
+        /*
+           Start around the message
+        */
+
+        particle.style.left =
+            (
+                45 +
+                Math.random() * 20
+            ) + "%";
+
+
+        particle.style.top =
+            (
+                35 +
+                Math.random() * 25
+            ) + "%";
+
+
+        /*
+           Random movement
+        */
+
+        particle.style.setProperty(
+            "--x",
+            (
+                Math.random() * 260 - 130
+            ) + "px"
+        );
+
+
+        particle.style.setProperty(
+            "--y",
+            (
+                Math.random() * -180 - 20
+            ) + "px"
+        );
+
+
+        particle.style.animationDelay =
+            (
+                Math.random() * .8
+            ) + "s";
+
+
+        particles.appendChild(
+            particle
+        );
+
+
+        /*
+           Remove when finished
+        */
+
+        setTimeout(() => {
+
+            particle.remove();
+
+        }, 3500);
+
+    }
+
+}
+
+
+/* =====================================================
+   CLICK
+===================================================== */
+
+cordHandle.addEventListener(
+    "click",
+    pull
+);
+
+
+/*
+   Also allow clicking
+   anywhere on the cord
+*/
+
+pullCord.addEventListener(
+    "click",
+    pull
+);
+
+
+/* =====================================================
+   TOUCH
+===================================================== */
+
+cordHandle.addEventListener(
+    "touchstart",
+    (event) => {
+
+        event.preventDefault();
+
+        pull();
+
+    }
+);
+
+
+/* =====================================================
+   KEYBOARD
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    (event) => {
+
+        if (
+            event.key === " " ||
+            event.key === "Enter"
+        ) {
+
+            pull();
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>

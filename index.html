@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff0f2">
+  <meta name="description" content="A little KCSE good-luck surprise made with love for Ayshuu.">
+  <title>A Little Gift for Ayshuu ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <main class="app">
+    <div class="topline"><span class="tiny-heart">♥</span> MADE WITH LOVE <span class="tiny-heart">♥</span></div>
+
+    <section id="intro" class="screen intro-screen" aria-labelledby="intro-title">
+      <div class="eyebrow">A LITTLE SURPRISE FOR YOU</div>
+      <h1 id="intro-title">My favourite girl,<br><em>Ayshuu</em></h1>
+      <p class="intro-copy">A little reminder before your big moment:<br><strong>I'm already so proud of you.</strong></p>
+
+      <div class="envelope-scene" aria-label="A pink envelope sealed with a heart">
+        <div class="sparkle sparkle-a">✦</div><div class="sparkle sparkle-b">♡</div>
+        <div class="envelope" id="envelope">
+          <div class="envelope-back"></div>
+          <div class="letter-peek"></div>
+          <div class="envelope-flap"></div>
+          <div class="envelope-front"></div>
+          <div class="wax-seal">♥</div>
+          <div class="envelope-heart">♡</div>
+        </div>
+        <div class="flower flower-left">✿</div><div class="flower flower-right">✿</div>
+      </div>
+
+      <button id="openBtn" class="primary-btn" type="button"><span>♡</span> Open your gift <span class="arrow">→</span></button>
+      <p class="hint">Take a little breath, then tap to open ♡</p>
+    </section>
+
+    <section id="letterScreen" class="screen letter-screen hidden" aria-labelledby="letter-title" aria-hidden="true">
+      <div class="letter-wrap">
+        <div class="paper-decor decor-top">♡ &nbsp; ✿ &nbsp; ♡</div>
+        <div class="letter-rule"><span></span>♥<span></span></div>
+        <h2 id="letter-title">My Ayshuu,</h2>
+        <p>As you sit for your KCSE exams, I want you to know how incredibly proud I am of you. You've worked hard, shown courage, and kept going even when things felt tough.</p>
+        <p>I believe in you—not just because of the grades you might get, but because of the kind, strong, beautiful person you are. Your worth is so much bigger than any exam. You bring so much light, kindness, and love into my life, and I'm so lucky to have you.</p>
+        <p>Whatever happens, I'll always be proud of you. You've already shown me so much just by being you. Keep your head up, trust yourself, and remember: you're capable, you're loved, and you can do this. ♥</p>
+        <p class="letter-emphasis">I'm always in your corner.</p>
+        <div class="signature">Daddy <span>♡</span></div>
+        <div class="paper-bottom">WITH ALL MY LOVE, ALWAYS</div>
+      </div>
+      <button id="finalBtn" class="primary-btn" type="button">One last thing, my girl <span class="arrow">→</span></button>
+    </section>
+
+    <section id="finalScreen" class="screen final-screen hidden" aria-labelledby="final-title" aria-hidden="true">
+      <div class="moon-heart" aria-hidden="true">♡</div>
+      <div class="eyebrow">A LITTLE REMINDER FROM DADDY</div>
+      <h2 id="final-title">You're going<br><em>to do amazing.</em></h2>
+      <div class="ornament">────── ♡ ──────</div>
+      <p>Take a deep breath.<br>Trust your preparation.<br>Give each paper your best.</p>
+      <p class="proud-line">I'm so proud of you, Ayshuu.<br><strong>Always. No matter what.</strong></p>
+      <div class="final-signature">I love you <span>♡</span><br><em>Daddy</em></div>
+      <div class="final-actions">
+        <button id="shareBtn" class="primary-btn" type="button">Share this little card <span class="arrow">↗</span></button>
+        <button id="replayBtn" class="secondary-btn" type="button">♡ Open it again</button>
+      </div>
+      <p id="shareStatus" class="share-status" role="status" aria-live="polite"></p>
+    </section>
+
+    <footer>KCSE SUCCESS CARD <span>♥</span> MADE JUST FOR AYSHUU</footer>
+  </main>
+  <div id="confetti" class="confetti-layer" aria-hidden="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>
